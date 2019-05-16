@@ -1,0 +1,60 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="default" extends="struts-default">
+		<result-types>
+			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+	
+		<action name="loginAction" method="login" class="com.accenture.actions.LoginAction">
+			<result name="loginpass">/pages/welcome.jsp</result>
+			<result name="loginfail">/pages/login.jsp</result>
+		</action>
+		
+		<action name="welcome" method="welcome" class="com.accenture.actions.LoginAction">
+			<result name="welcome">/pages/welcome.jsp</result>
+		</action>
+		
+		<action name="logout" method="logout" class="com.accenture.actions.LoginAction">
+			<result name="welcome">/pages/login.jsp</result>
+		</action>
+		
+		<action name="detail" method="detail" class="com.accenture.actions.RecommendationAction">
+			<result name="detail">/pages/detail.jsp</result>
+		</action>
+		
+		<action name="recommendation0" method="recommendation0" class="com.accenture.actions.RecommendationAction">
+			<result name="rec0" type="tiles">recommendation0</result>
+		</action>
+		
+		<action name="recommendation1" method="recommendation1" class="com.accenture.actions.RecommendationAction">
+			<result name="rec1" type="tiles">recommendation1</result>
+		</action>
+		
+			<action name="recommendation2" method="recommendation2" class="com.accenture.actions.RecommendationAction">
+			<result name="rec2" type="tiles">recommendation2</result>
+		</action>
+		
+		<action name="recommendation3" method="recommendation3" class="com.accenture.actions.RecommendationAction">
+			<result name="rec3" type="tiles">recommendation3</result>
+		</action>
+		
+			<action name="recommendation4" method="recommendation4" class="com.accenture.actions.RecommendationAction">
+			<result name="rec4" type="tiles">recommendation4</result>
+		</action>
+		
+			<action name="recommendation5" method="recommendation5" class="com.accenture.actions.RecommendationAction">
+			<result name="rec5" type="tiles">recommendation5</result>
+		</action>
+		
+		<action name="recommendation6" method="recommendation6" class="com.accenture.actions.RecommendationAction">
+			<result name="rec6" type="tiles">recommendation6</result>
+		</action>
+		
+		<action name="recommendation7" method="recommendation7" class="com.accenture.actions.RecommendationAction">
+			<result name="rec7" type="tiles">recommendation7</result>
+		</action>
+	</package>
+</struts>

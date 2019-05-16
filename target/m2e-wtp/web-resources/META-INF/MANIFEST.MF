@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Built-By: asus
+Build-Jdk: 1.8.0_144
+Implementation-Title: CSE308_Assignment1 Maven Webapp
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: assignment1
+Implementation-Vendor: Pivotal Software, Inc.
+Created-By: Maven Integration for Eclipse
+

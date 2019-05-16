@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+  <definition name="baseLayout" template="/pages/baseLayout.jsp">
+      <put-attribute name="title"  value="Template"/>
+      <put-attribute name="header" value="/pages/header.jsp"/>
+      <put-attribute name="menu"   value="/pages/menu.jsp"/>
+      <put-attribute name="body"   value="/pages/body.jsp"/>
+      <put-attribute name="footer"   value="/pages/footer.jsp"/>
+  </definition>
+  
+  <definition name="welcome" extends="baseLayout">
+      <put-attribute name="title"  value="Welcome"/>
+      <put-attribute name="body"   value="/pages/welcome.jsp"/>      
+  </definition>
+  
+  <definition name="recommendation0" extends="baseLayout">
+      <put-attribute name="title"  value="Recommendation0"/>
+      <put-attribute name="body"   value="/pages/recommendation0.jsp"/>      
+  </definition>
+  
+  <definition name="recommendation1" extends="baseLayout">
+      <put-attribute name="title"  value="Recommendation1"/>
+      <put-attribute name="body"   value="/pages/recommendation1.jsp"/>      
+  </definition>
+  
+  <definition name="recommendation2" extends="baseLayout">
+      <put-attribute name="title"  value="Recommendation2"/>
+      <put-attribute name="body"   value="/pages/recommendation2.jsp"/>      
+  </definition>
+  
+    <definition name="recommendation3" extends="baseLayout">
+      <put-attribute name="title"  value="Recommendation3"/>
+      <put-attribute name="body"   value="/pages/recommendation3.jsp"/>      
+  </definition>
+  
+    <definition name="recommendation4" extends="baseLayout">
+      <put-attribute name="title"  value="Recommendation4"/>
+      <put-attribute name="body"   value="/pages/recommendation4.jsp"/>      
+  </definition>
+  
+    <definition name="recommendation5" extends="baseLayout">
+      <put-attribute name="title"  value="Recommendation5"/>
+      <put-attribute name="body"   value="/pages/recommendation5.jsp"/>      
+  </definition>
+  
+    <definition name="recommendation6" extends="baseLayout">
+      <put-attribute name="title"  value="Recommendation6"/>
+      <put-attribute name="body"   value="/pages/recommendation6.jsp"/>      
+  </definition>
+  
+  <definition name="recommendation7" extends="baseLayout">
+      <put-attribute name="title"  value="Recommendation7"/>
+      <put-attribute name="body"   value="/pages/recommendation7.jsp"/>      
+  </definition>  
+  
+
+</tiles-definitions>

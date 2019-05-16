@@ -1,0 +1,90 @@
+#productDesc {  
+    border: 0px green solid;  
+    max-width: 300px;  
+    font-size: 11px;  
+    font-family: Arial;   
+    vertical-align: top;
+    text-align: left;   
+    color:	#4682B4;
+    word-wrap: break-word;
+}   
+  
+#productImage {  
+    height: 70px; 
+    width: 80px;   
+}   
+ 
+#productStarImage {  
+    height: 19px; 
+    width:  55px;     
+}     
+   
+#logoStorm {   
+    height: 35px;   
+    width:  80px;           
+}      
+      
+#logoSpring {   
+    height: 40px;   
+    width:  60px;            
+}     
+
+#logoDatastax {   
+    height: 40px;   
+    width:  80px;           
+}          
+   
+#topImage {  
+    height: 700px; 
+    width: 720px;       
+}     
+
+#welcomeimage
+{
+width: 600px;
+height: 700px;  
+}
+
+#enterImage
+{
+width: 160px;
+height: 160px;  
+}    
+ 
+  
+#bottomImage {   
+    height: 50px;  
+    width: 720px;         
+}      
+
+ 
+#productHeader {   
+    font-size: 16px;   
+    font-family: Arial;  
+    color:	Black
+}
+
+#menuList {  
+    vertical-align:top;
+    text-align: left;
+    color:	#4682B4
+}  
+
+#ex
+{
+width:220px;
+padding:10px;
+border:5px solid gray;
+margin:0px;
+}
+
+
+ .activeItem{
+   background-color:#FFCC66; /*make some difference for the active item here */
+}
+
+.recentTable td
+{
+	width: 50px;
+}
+  
