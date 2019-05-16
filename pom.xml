@@ -1,14 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>assignment1</groupId>
-  <artifactId>CSE308_Assignment1</artifactId>
-  <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>CSE308_Assignment1 Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-  
-  <properties>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>assignment1</groupId>
+	<artifactId>CSE308_Assignment1</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>CSE308_Assignment1 Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
         <struts2.version>2.1.6</struts2.version>
         <xwork.version>2.1.2</xwork.version>
 		
@@ -21,29 +21,28 @@
 		<tomcat-maven-plugin-version>1.1</tomcat-maven-plugin-version>
     </properties>
     
-     <!-- 配置spring boot所需的依赖 -->
+    <!-- 配置spring boot所需的依赖 -->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.10.RELEASE</version>
 	</parent>
     
-  <dependencies>
-     
-      <dependency>
-	<groupId>org.apache.struts</groupId>
-	<artifactId>struts2-core</artifactId>
-	<version>2.1.6</version>
-	<scope>compile</scope>
-</dependency>
+	<dependencies>
+		<dependency>
+		<groupId>org.apache.struts</groupId>
+		<artifactId>struts2-core</artifactId>
+		<version>2.1.6</version>
+		<scope>compile</scope>
+	</dependency>
             
-  
-      <dependency>
-	<groupId>org.apache.tiles</groupId>
-	<artifactId>tiles-core</artifactId>
-	<version>2.1.2</version>
-	<scope>compile</scope>
-</dependency>
+
+    <dependency>
+		<groupId>org.apache.tiles</groupId>
+		<artifactId>tiles-core</artifactId>
+		<version>2.1.2</version>
+		<scope>compile</scope>
+	</dependency>
 
 
 <dependency>
@@ -163,7 +162,6 @@
 <dependency>
     <groupId>com.googlecode.json-simple</groupId>
     <artifactId>json-simple</artifactId>
-   <!--  <version>1.1</version> -->
 </dependency>
 
 <dependency>
@@ -182,7 +180,7 @@
 			<artifactId>aws-java-sdk</artifactId>
 			<version>1.9.20</version>
 			
-			 <exclusions>
+			<exclusions>
                 <exclusion>
                     <artifactId>joda-time</artifactId>
                     <groupId>joda-time</groupId>
@@ -191,10 +189,9 @@
             
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
-<dependency>
-　　<groupId>org.apache.httpcomponents</groupId>
-　　<artifactId>httpclient</artifactId>
-　　<!-- <version>4.5.2</version> -->
+		<dependency>
+<groupId>org.apache.httpcomponents</groupId>
+<artifactId>httpclient</artifactId>
 </dependency>
 
 
@@ -251,22 +248,22 @@
 </dependency>
 
 <dependency>        
-<groupId>org.springframework</groupId>       
- <artifactId>spring-aop</artifactId>      
-   </dependency>    
-   
-    <dependency>       
-     <groupId>org.springframework</groupId>        
-     <artifactId>spring-context</artifactId>       
-      </dependency>
-      
-      <dependency>       
-     <groupId>org.springframework</groupId>        
-     <artifactId>spring-webmvc</artifactId>       
-      </dependency>
+	<groupId>org.springframework</groupId>       
+	<artifactId>spring-aop</artifactId>      
+</dependency>    
+
+<dependency>       
+	<groupId>org.springframework</groupId>        
+	<artifactId>spring-context</artifactId>       
+</dependency>
+
+<dependency>       
+	<groupId>org.springframework</groupId>        
+	<artifactId>spring-webmvc</artifactId>       
+</dependency>
 		
-  </dependencies>
-  <build>
+</dependencies>
+	<build>
     <finalName>CSE308_Assignment1</finalName>
     <plugins>
 			
@@ -325,9 +322,9 @@
 			
 		</plugins>
 	</pluginManagement>
-  </build>
-  
-  <repositories>
+	</build>
+
+	<repositories>
         <repository>
             <id>apache-snapshot</id>
             <url>https://repository.apache.org/content/groups/snapshots/</url>
