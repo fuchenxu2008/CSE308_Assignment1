@@ -7,6 +7,11 @@
 		<result-types>
 			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
 		</result-types>
+	
+		<action name="loginAction" method="login" class="com.accenture.actions.LoginAction">
+			<result name="loginpass">/pages/welcome.jsp</result>
+			<result name="loginfail">/pages/login.jsp</result>
+		</action>
 		
 		<action name="welcome" method="welcome" class="com.accenture.actions.LoginAction">
 			<result name="welcome">/pages/welcome.jsp</result>

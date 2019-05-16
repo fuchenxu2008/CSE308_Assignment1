@@ -161,7 +161,7 @@ public class RecommendationAction extends ActionSupport implements ServletReques
         priceList = new ArrayList<String>();
 
         try {
-            File file = new File("D:/Program Files/apache-tomcat-9.0.10/webapps/CSE308_Assignment1/resources/images"
+            File file = new File("../webapps/CSE308_Assignment1/resources/images"
                     + "/" + productType + "/" + "productDesc.txt");
             FileReader fileReader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -178,7 +178,7 @@ public class RecommendationAction extends ActionSupport implements ServletReques
         }
 
         try {
-            File file = new File("D:/Program Files/apache-tomcat-9.0.10/webapps/CSE308_Assignment1/resources/images"
+            File file = new File("../webapps/CSE308_Assignment1/resources/images"
                     + "/" + productType + "/" + "/" + "pricelist.txt");
             FileReader fileReader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -208,7 +208,7 @@ public class RecommendationAction extends ActionSupport implements ServletReques
         imageDescList = new ArrayList<String>();
         starImageUrlList = new ArrayList<String>();
         priceList = new ArrayList<String>();
-        File imageDir = new File("D:/Program Files/apache-tomcat-9.0.10/webapps/CSE308_Assignment1/resources/images"
+        File imageDir = new File("../webapps/CSE308_Assignment1/resources/images"
                 + "/" + productType);
         for (File imageFile : imageDir.listFiles()) {
             String imageFileName = imageFile.getName();
@@ -219,7 +219,7 @@ public class RecommendationAction extends ActionSupport implements ServletReques
             }
         }
         try {
-            File file = new File("D:/Program Files/apache-tomcat-9.0.10/webapps/CSE308_Assignment1/resources/images"
+            File file = new File("../webapps/CSE308_Assignment1/resources/images"
                     + "/" + productType + "/" + "/" + "productDesc.txt");
             FileReader fileReader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -236,7 +236,7 @@ public class RecommendationAction extends ActionSupport implements ServletReques
         }
 
         try {
-            File file = new File("D:/Program Files/apache-tomcat-9.0.10/webapps/CSE308_Assignment1/resources/images"
+            File file = new File("../webapps/CSE308_Assignment1/resources/images"
                     + "/" + productType + "/" + "/" + "pricelist.txt");
             FileReader fileReader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -253,7 +253,7 @@ public class RecommendationAction extends ActionSupport implements ServletReques
         }
 
         File StarImageDir = new File(
-                "D:/Program Files/apache-tomcat-9.0.10/webapps/CSE308_Assignment1/resources/images" + "/starInfo");
+                "../webapps/CSE308_Assignment1/resources/images" + "/starInfo");
         for (File imageFile : StarImageDir.listFiles()) {
             String imageFileName = imageFile.getName();
             // add this images name to the list we are building up

@@ -19,7 +19,7 @@ public class LoadPrice implements ServletRequestAware {
 
     public String getProducts() {
         try {
-            String response = sendHttpGetRequest("http://localhost:8080/OrchestrationAPI/products/");
+            String response = sendHttpGetRequest("http://localhost:8081/OrchestrationAPI/products/");
             System.out.println(response);
             if (response.length() == 2) {
                 setErrorMessage("No products returned");
@@ -38,7 +38,7 @@ public class LoadPrice implements ServletRequestAware {
 
     public String getProduct(String id) {
         try {
-            String response = sendHttpGetRequest("http://localhost:8080/OrchestrationAPI/products/" + id);
+            String response = sendHttpGetRequest("http://localhost:8081/OrchestrationAPI/products/" + id);
             System.out.println(response);
             if (response.length() == 2) {
                 setErrorMessage("No products returned");
