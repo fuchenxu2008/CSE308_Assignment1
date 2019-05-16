@@ -1,0 +1,4 @@
+db.student.insert({"name":"Xi", "address":"Beijing"})
+db.student.find({"name":"Xi"});
+db.student.find();
+

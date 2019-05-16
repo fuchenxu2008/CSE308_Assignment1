@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
+
+	<context:component-scan base-package="com.accenture.*,com.accenture.util.exception" />
+	<context:annotation-config />
+	<annotation-driven />
+	
+    <beans:bean id="taskExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+        <beans:property name="corePoolSize" value="5"/>
+        <beans:property name="maxPoolSize" value="10"/>
+        <beans:property name="waitForTasksToCompleteOnShutdown" value="true"/>
+    </beans:bean>
+    
+    <beans:bean id="aSyncService"
+		class="com.accenture.util.ASyncServiceImpl" />
+		
+    
+	<!-- DispatcherServlet Context: defines this servlet's request-processing 
+		infrastructure -->
+
+	<!-- Enables the Spring MVC @Controller programming model -->
+
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving 
+		up static resources in the ${webappRoot}/resources directory -->
+	<resources mapping="/resources/**" location="/resources/" />
+
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
+		in the /WEB-INF/views directory -->
+	<beans:bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+
+	<beans:bean id="mongoDBConnectionClient"
+		class="com.accenture.dao.MongoDBConnectionBuilderImpl" />
+
+
+	<beans:bean id="mongoDBClient" class="com.accenture.dao.MongoDBClientImpl"
+		p:builder-ref="mongoDBConnectionClient" />
+
+	<beans:bean id="clientMongoDBAccess" class="com.accenture.util.ClientMongoDBAccessImpl" />
+
+	<beans:bean id="managementScreenAccess"
+		class="com.accenture.util.ManagementScreenAccessImpl" />
+
+	<beans:bean id="managementScreenClient"
+		class="com.accenture.dao.ManagementScreenClientImpl" p:builder-ref="mongoDBConnectionClient" />
+
+	<beans:bean id="mongoDBReportsClient" class="com.accenture.dao.MongoDBReportsClientImpl"
+		p:builder-ref="mongoDBConnectionClient" />
+
+	<beans:bean id="reportAccess" class="com.accenture.util.ReportAccessImpl" />
+
+	<beans:bean id="mongoDBDashboardClient"
+		class="com.accenture.dao.MongoDBDashboardClientImpl" p:builder-ref="mongoDBConnectionClient" />
+
+	<beans:bean id="deploymentAccess" class="com.accenture.util.DeploymentAccessImpl" />
+
+	<beans:bean id="dashboardAccess" class="com.accenture.util.DashboardAccessImpl" />
+
+	<beans:bean id="skuAccess" class="com.accenture.util.SkuAccessImpl" />
+	<beans:bean id="serviceAccess" class="com.accenture.util.ServiceAccessImpl" />
+
+	<beans:bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<beans:property name="basenames">
+			<beans:list>
+				<beans:value>messages</beans:value>
+			</beans:list>
+		</beans:property>
+	</beans:bean>
+
+
+
+	<beans:bean id="message" class="com.accenture.util.exception.PaasError">
+		<beans:property name="messageSource" ref="messageSource" />
+	</beans:bean>
+
+	<beans:bean id="placeholderProperties"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<beans:property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
+		<beans:property name="ignoreUnresolvablePlaceholders"
+			value="true" />
+		<beans:property name="ignoreResourceNotFound" value="true" />
+		<beans:property name="order" value="0" />
+		<beans:property name="locations">
+			<util:list>
+				<beans:value>classpath:application-test.properties</beans:value>
+				<beans:value>classpath:messages_en.properties</beans:value>
+			</util:list>
+		</beans:property>
+	</beans:bean>
+	
+	
+</beans:beans>

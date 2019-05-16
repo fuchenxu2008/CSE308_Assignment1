@@ -1,0 +1,15 @@
+package com.accenture.rbac 
+import com.accenture.model.User
+import com.accenture.model.Action
+import com.accenture.rbac.RBACValidator
+
+rule "only_users_with_certain_active_roles_can_perform_actions"
+  when
+  $action: Action()
+  $user: User(actions contains $action.roleName)
+  
+  then
+	  System.out.println("Action permitted");
+end
+
+
