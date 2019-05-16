@@ -37,7 +37,7 @@ public class LoginAction extends ActionSupport implements ServletRequestAware {
 
         try {
             String response = sendHttpGetRequest(
-                    "http://localhost:8080/OrchestrationAPI/clients/" + username + "/" + password);
+                    "http://localhost:8081/OrchestrationAPI/clients/" + username + "/" + password);
             System.out.println(response);
             JSONArray jsonArray = (JSONArray) new JSONParser().parse(response);
             if (jsonArray.size() == 1) {
